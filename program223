@@ -1,0 +1,12 @@
+# Function to generate Fibonacci sequence up to n terms
+def fibonacci(n):
+    fib_sequence = [0, 1]  # Starting values for the Fibonacci sequence
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])  # Adding the next term
+    return fib_sequence[:n]
+
+# Input: number of terms
+n = int(input("Enter the number of terms: "))
+
+# Output: Fibonacci sequence
+print(fibonacci(n))
